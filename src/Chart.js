@@ -1,7 +1,7 @@
 import React from "react";
 import { Bar, Line } from "react-chartjs-2";
 
-import dados from "./dados.json";
+import dados from "./dados";
 
 export const ConfirmadosEvolucao = () => {
   const data = {

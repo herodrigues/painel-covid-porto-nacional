@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import dados from "./dados.json";
+import dados from "./dados";
 
 export const CasosConfirmados = () => (
   <div className="h-56 flex flex-col mr-4 p-4 flex-col w-1/3 border border-gray-100 shadow bg-white">
@@ -66,12 +67,14 @@ export const SaibaMais = () => (
   <div className="h-56 w-1/3 border border-gray-100 shadow rounded bg-teal-600 text-white text-left p-6">
     <div className="py-2 font-bold">Sobre o painel</div>
     <div className="py-2">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-      ullamcorper fermentum tortor, quis porttitor velit ullamcorper eget.
-      Mauris id leo in orci mollis convallis.
+      Diariamente, a Secretaria Municipal da Saúde, por meio da Secretaria de
+      Vigilância em Saúde divulga dados consolidados sobre o COVID-19. Saiba
+      mais sobre o painel.
     </div>
-    <button class="my-2 bg-transparent hover:bg-teal-500 text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded">
-      Saiba mais
-    </button>
+    <Link to="/sobre">
+      <button class="my-2 bg-transparent hover:bg-teal-500 text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded">
+        Saiba mais
+      </button>
+    </Link>
   </div>
 );

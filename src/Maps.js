@@ -1,7 +1,7 @@
 import React from "react";
 import { Map, TileLayer, Circle, Tooltip } from "react-leaflet";
 
-import dados from "./dados.json";
+import dados from "./dados";
 
 const position = {
   porto_nacional: [-10.7003365, -48.4048126],
