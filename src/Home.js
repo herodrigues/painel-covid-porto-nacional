@@ -16,9 +16,7 @@ import TopPanel from "./TopPanel";
 export default function Home() {
   return (
     <div>
-      <div className="flex mb-4 py-8 px-16">
-        <TopPanel title="Painel Coronavírus" />
-      </div>
+      <TopPanel title="Painel Coronavírus" />
       <div className="flex p-4 mx-12 text-center">
         <CasosConfirmados />
         <ObitosConfirmados />
