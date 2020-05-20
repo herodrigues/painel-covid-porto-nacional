@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "./painel-covid-porto-nacional",
+  "homepage": "https://herodrigues.me/painel-covid-porto-nacional/",
   "eslintConfig": {
     "extends": "react-app"
   },
