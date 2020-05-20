@@ -1,33 +1,25 @@
 import React from "react";
 
-const start = new Date("2020-04-27");
-const end = new Date("2020-05-19");
-let datas = [];
-const date = new Date(start);
-
-while (date <= end) {
-  datas.push(
-    new Date(date).toLocaleDateString("pt-BR", {
-      year: "2-digit",
-      month: "2-digit",
-      day: "2-digit",
-    })
-  );
-  date.setDate(date.getDate() + 1);
-}
-datas = datas.reverse();
-
 export default function Decree() {
-  const files = [];
+  const [files, setFiles] = React.useState([]);
+
   const owner = "herodrigues";
   const repo = "painel-covid-porto-nacional";
-  const path = "/";
+  const path = "/decretos";
 
-  fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`)
-    .then((response) => response.json())
-    .then((response) => {
-      response.map((item) => files.push(item));
-    });
+  React.useEffect(() => {
+    const fetchFiles = async () => {
+      const result = await fetch(
+        `https://api.github.com/repos/${owner}/${repo}/contents/${path}`
+      )
+        .then((response) => response.json())
+        .then((response) => response);
+
+      setFiles(result);
+    };
+
+    fetchFiles();
+  }, []);
 
   return (
     <table className="table-auto bg-white max-w-full w-10/12 m-12">

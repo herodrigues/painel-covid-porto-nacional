@@ -6,11 +6,13 @@ function AppBar() {
   return (
     <nav className="flex items-center justify-between flex-wrap bg-white p-6 border border-gray-400 shadow">
       <div className="flex items-center flex-shrink-0 text-gray-800 mr-6">
-        <span className="font-semibold text-2xl tracking-tight uppercase">
-          <span className="text-black text-black">Coronavírus </span>
-          <span className="text-extrabold">{"//"}</span>
-          <span className="fold-normal text-teal-600"> Porto Nacional</span>
-        </span>
+        <Link to="/">
+          <span className="font-semibold text-2xl tracking-tight uppercase">
+            <span className="text-black text-black">Coronavírus </span>
+            <span className="text-extrabold">{"//"}</span>
+            <span className="fold-normal text-teal-600"> Porto Nacional</span>
+          </span>
+        </Link>
       </div>
       <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <div className="text-sm lg:flex-grow"></div>

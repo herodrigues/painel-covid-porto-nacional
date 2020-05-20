@@ -1,33 +1,25 @@
 import React from "react";
 
-const start = new Date("2020-04-27");
-const end = new Date("2020-05-19");
-let datas = [];
-const date = new Date(start);
-
-while (date <= end) {
-  datas.push(
-    new Date(date).toLocaleDateString("pt-BR", {
-      year: "2-digit",
-      month: "2-digit",
-      day: "2-digit",
-    })
-  );
-  date.setDate(date.getDate() + 1);
-}
-datas = datas.reverse();
-
 export default function Report() {
-  const files = [];
+  const [files, setFiles] = React.useState([]);
+
   const owner = "herodrigues";
   const repo = "painel-covid-porto-nacional";
-  const path = "/";
+  const path = "/boletins";
 
-  fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`)
-    .then((response) => response.json())
-    .then((response) => {
-      response.map((item) => files.push(item));
-    });
+  React.useEffect(() => {
+    const fetchFiles = async () => {
+      const result = await fetch(
+        `https://api.github.com/repos/${owner}/${repo}/contents/${path}`
+      )
+        .then((response) => response.json())
+        .then((response) => response);
+
+      setFiles(result);
+    };
+
+    fetchFiles();
+  }, []);
 
   return (
     <table className="table-auto bg-white max-w-full w-10/12 m-12">
@@ -41,7 +33,9 @@ export default function Report() {
       </thead>
       <tbody>
         {files.map((file, index) => {
-          const date = file.replace(/\//g, "_");
+          let date = file.name.slice(-12).replace(/_/g, "/");
+          date = date.split(".")[0];
+          date = date.toLocaleString("pt-BR");
           const key = files.length - index;
 
           return (
@@ -53,13 +47,11 @@ export default function Report() {
                   src="https://via.placeholder.com/150"
                 />
               </td>
-              <td className="border px-4 py-2">
-                Boletim Epidemiológico COVID-19 Nº {key} de Porto Nacional - TO
-              </td>
-              <td className="border px-4 py-2">{file}</td>
+              <td className="border px-4 py-2">{file.name}</td>
+              <td className="border px-4 py-2">{date}</td>
               <td className="border px-4 py-2">
                 <a
-                  href={`/boletins/${key}_Boletim_Epidemiologico_Covid19_${date}.pdf`}
+                  href={`/boletins/${file.download_url}`}
                   className="cursor-pointer bg-white hover:bg-gray-100 text-green-800 font-semibold py-2 px-4 rounded shadow inline-flex items-center"
                   download
                 >

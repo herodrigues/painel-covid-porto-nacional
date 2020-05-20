@@ -72,7 +72,7 @@ export const SaibaMais = () => (
       mais sobre o painel.
     </div>
     <Link to="/sobre">
-      <button class="my-2 bg-transparent hover:bg-teal-500 text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded">
+      <button className="my-2 bg-transparent hover:bg-teal-500 text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded">
         Saiba mais
       </button>
     </Link>
