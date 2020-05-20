@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/painel-covid-porto-nacional/static/css/main.a4e5421f.chunk.css",
-    "main.js": "/painel-covid-porto-nacional/static/js/main.b99f826b.chunk.js",
-    "main.js.map": "/painel-covid-porto-nacional/static/js/main.b99f826b.chunk.js.map",
-    "runtime-main.js": "/painel-covid-porto-nacional/static/js/runtime-main.7433c586.js",
-    "runtime-main.js.map": "/painel-covid-porto-nacional/static/js/runtime-main.7433c586.js.map",
-    "static/js/2.b6936775.chunk.js": "/painel-covid-porto-nacional/static/js/2.b6936775.chunk.js",
-    "static/js/2.b6936775.chunk.js.map": "/painel-covid-porto-nacional/static/js/2.b6936775.chunk.js.map",
-    "index.html": "/painel-covid-porto-nacional/index.html",
-    "precache-manifest.eb8c48770e66faaf3c8fdc749599add9.js": "/painel-covid-porto-nacional/precache-manifest.eb8c48770e66faaf3c8fdc749599add9.js",
-    "service-worker.js": "/painel-covid-porto-nacional/service-worker.js",
-    "static/css/main.a4e5421f.chunk.css.map": "/painel-covid-porto-nacional/static/css/main.a4e5421f.chunk.css.map",
-    "static/js/2.b6936775.chunk.js.LICENSE.txt": "/painel-covid-porto-nacional/static/js/2.b6936775.chunk.js.LICENSE.txt"
+    "main.css": "./painel-covid-porto-nacional/static/css/main.a4e5421f.chunk.css",
+    "main.js": "./painel-covid-porto-nacional/static/js/main.bb9b2fa1.chunk.js",
+    "main.js.map": "./painel-covid-porto-nacional/static/js/main.bb9b2fa1.chunk.js.map",
+    "runtime-main.js": "./painel-covid-porto-nacional/static/js/runtime-main.791fce04.js",
+    "runtime-main.js.map": "./painel-covid-porto-nacional/static/js/runtime-main.791fce04.js.map",
+    "static/js/2.30ba18e3.chunk.js": "./painel-covid-porto-nacional/static/js/2.30ba18e3.chunk.js",
+    "static/js/2.30ba18e3.chunk.js.map": "./painel-covid-porto-nacional/static/js/2.30ba18e3.chunk.js.map",
+    "index.html": "./painel-covid-porto-nacional/index.html",
+    "precache-manifest.8c8419fe2205425d22182f409fdbee42.js": "./painel-covid-porto-nacional/precache-manifest.8c8419fe2205425d22182f409fdbee42.js",
+    "service-worker.js": "./painel-covid-porto-nacional/service-worker.js",
+    "static/css/main.a4e5421f.chunk.css.map": "./painel-covid-porto-nacional/static/css/main.a4e5421f.chunk.css.map",
+    "static/js/2.30ba18e3.chunk.js.LICENSE.txt": "./painel-covid-porto-nacional/static/js/2.30ba18e3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.7433c586.js",
-    "static/js/2.b6936775.chunk.js",
+    "static/js/runtime-main.791fce04.js",
+    "static/js/2.30ba18e3.chunk.js",
     "static/css/main.a4e5421f.chunk.css",
-    "static/js/main.b99f826b.chunk.js"
+    "static/js/main.bb9b2fa1.chunk.js"
   ]
 }
