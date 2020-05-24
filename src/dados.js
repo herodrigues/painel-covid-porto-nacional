@@ -25,6 +25,7 @@ module.exports = {
     descartados: 138,
     obitos: 1,
     recuperados: 4,
+    acompanhamento: 84,
   },
   casos: {
     porto_nacional: {

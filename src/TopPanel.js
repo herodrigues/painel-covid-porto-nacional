@@ -6,7 +6,9 @@ const TopPanel = ({ title, download }) => {
   return (
     <div className="flex mb-4 py-6 px-16">
       <div className="flex flex-col w-1/2">
-        <span className="font-mono text-green-800 font-extrabold">COVID19</span>
+        <span className="font-mono text-green-800 font-extrabold">
+          COVID-19
+        </span>
         <span className="font-bold text-2xl font-sans">{title}</span>
         <span className="text-gray-700 text-sm">Atualizado em: {date}</span>
       </div>
